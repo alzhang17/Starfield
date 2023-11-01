@@ -38,6 +38,7 @@ class Particle {
     myX = myX + Math.cos(myAngle)*mySpeed;
     myY = myY + Math.sin(myAngle)*mySpeed;
     if ((myX > 500 && myY > 500) || (myX < 0 && myY < 0) || (myX < 0 && myY > 500) || (myX > 500 && myY < 0)) {
+      myAngle = Math.random()*2*PI;
       X = (width/2) + 60 * Math.cos(myAngle); 
       Y = (height/2) + 60 * Math.sin(myAngle);
       myX = (float)X;
